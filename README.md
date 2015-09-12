@@ -6,7 +6,7 @@ A JavaScript app that allows a user to deposit an initial amount, then add or su
 
 ## Tests
 
-Testing the Javascript methods and specs can be done through Mocha, Chai, Latte, and Espresso or even regular coffee.
+Testing the Javascript methods and specs can be done through Mocha, Chai, Latte, Espresso or even regular coffee.
 
 `Use the spec runner html file`
 
@@ -16,4 +16,4 @@ Testing the Javascript methods and specs can be done through Mocha, Chai, Latte,
 
 ## License
 
-Copyright, StumpTown DerpCAT LLC 2015. 
+StumpTown DerpCAT LLC 2015
