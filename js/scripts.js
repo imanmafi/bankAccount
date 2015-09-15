@@ -24,7 +24,7 @@ $(document).ready(function() {
   $("form#new-account").submit(function(event) {
     newCustomer.name = $("input#customer-name").val();
     newAccount.customer = newCustomer;
-    $("#customer").text(newCustomer.name);
+    $(".customer").text(newCustomer.name);
     updateAccount();
 
     $("#hideafterenter").hide();
@@ -50,7 +50,7 @@ $(document).ready(function() {
   $("form#updated-account").submit(function(event) {
     newCustomer.name = $("input#updated-customer-name").val();
     newAccount.customer = newCustomer;
-    $("#customer").text(newCustomer.name);
+    $(".customer").text(newCustomer.name);
     $("#account-header").text('New Account');
     $("#transactions").show();
     $("#settings").hide();
@@ -72,6 +72,11 @@ function updateAccount(action) {
   var value = parseFloat($(selector).val());
   newAccount[methodToInvoke](value);
   $("#balance").text(newAccount.balance);
+
+  if (newAccount.balance >= 5000) {
+    $("#portfolioModal1").modal({'show' : true});
+  }
+
   $(".result").show();
   $(selector).val("");
 }
