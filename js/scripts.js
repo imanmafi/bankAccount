@@ -16,7 +16,8 @@ Account.prototype.deposit = function(amount) {
 }
 
 $(document).ready(function() {
-    var newAccount = Object.create(Account);
+    var newCustomer = new Customer('Vin Diesel')
+    var newAccount = new Account(0, newCustomer);
 
   $("form#new-account").submit(function(event) {
     event.preventDefault();
@@ -31,17 +32,19 @@ $(document).ready(function() {
   $("form#deposit").submit(function(event) {
     event.preventDefault();
     var newdeposit = parseFloat($("input#newdeposit").val());
-    newAccount.balance = newdeposit + newAccount.balance;
+    newAccount.deposit(newdeposit);
     $("#balance").text(newAccount.balance);
     $(".result").show();
+    $("input#newdeposit").val("");
   });
 
   $("form#withdraw").submit(function(event) {
     event.preventDefault();
     var withdraw = parseFloat($("input#withdraw").val());
-    newAccount.balance = newAccount.balance - withdraw;
+    newAccount.withdraw(withdraw);
     $("#balance").text(newAccount.balance);
     $(".result").show();
+    $("input#withdraw").val("");
   });
 
 });
