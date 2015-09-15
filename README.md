@@ -14,6 +14,9 @@ Testing the Javascript methods and specs can be done through Mocha, Chai, Latte,
 
 `run index.html` in the project folder.
 
+## Contributors
+Iman Mafi & Vaughn Dice
+
 ## License
 
 StumpTown DerpCAT LLC 2015

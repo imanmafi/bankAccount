@@ -1,19 +1,19 @@
-var Account = {
-  balance: 0,
+function Customer(name) {
+  this.name = name;
+}
 
-  // customer: function() {
-  //   return "Hello there, " + this.name + ".";
-  // },
+function Account(balance, customer) {
+  this.balance = balance;
+  this.customer = customer;
+}
 
-  withdraw: function(amount) {
-    this.balance = this.balance - amount;
-  },
+Account.prototype.withdraw = function(amount) {
+  this.balance -= amount;
+}
 
-  deposit: function(amount) {
-    this.balance = this.balance + amount;
-  }
-};
-
+Account.prototype.deposit = function(amount) {
+  this.balance += amount;
+}
 
 $(document).ready(function() {
     var newAccount = Object.create(Account);
