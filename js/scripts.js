@@ -19,7 +19,7 @@ var newCustomer = new Customer('Vin Diesel')
 var newAccount = new Account(0, newCustomer);
 
 $(document).ready(function() {
-
+  console.log('WE GOT HERE');
   $("form#new-account").submit(function(event) {
     event.preventDefault();
     var deposit = parseFloat($("input#initial-deposit").val());
