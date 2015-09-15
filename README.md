@@ -1,4 +1,4 @@
-![alt tag](https://github.com/imanmafi/bankAccount/blob/master/img/image.png)
+![alt tag](https://github.com/imanmafi/bankAccount/blob/master/img/readmegraphic.png)
 
 # StumpTown Bespoke Banking in JavaScript
 
