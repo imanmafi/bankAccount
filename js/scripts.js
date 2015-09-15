@@ -15,18 +15,20 @@ Account.prototype.deposit = function(amount) {
   this.balance += amount;
 }
 
-var newCustomer = new Customer('Vin Diesel')
-var newAccount = new Account(0, newCustomer);
+// var newCustomer = new Customer('Vin Diesel')
+var newAccount = new Account(0, new Object());
 
 $(document).ready(function() {
-  console.log('WE GOT HERE');
   $("form#new-account").submit(function(event) {
     event.preventDefault();
     var deposit = parseFloat($("input#initial-deposit").val());
-    newAccount.balance = deposit + newAccount.balance;
+    var newCustomer = new Customer($("input#customer-name").val());
+    newAccount.customer = newCustomer;
+    newAccount.deposit(deposit);
     $("#balance").text(newAccount.balance);
     $(".result").show();
     $("#hideafterenter").hide();
+    $("#customer").text(newCustomer.name);
     $("#existing").show();
   });
 
