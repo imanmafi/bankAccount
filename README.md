@@ -3,7 +3,7 @@
 # StumpTown Bespoke Banking in JavaScript
 
 A JavaScript app that allows a user to deposit an initial amount, then add or subtract with deposits and withdrawals. 
-## A live working version of this javascript app can be found and used here: `stumptown-banking.bitballoon.com`
+## A live working version of this javascript app can be found and used here: `https://stumptown-banking.bitballoon.com`
 
 ## Tests
 
