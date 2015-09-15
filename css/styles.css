@@ -1,7 +1,10 @@
 .result {
   display: none;
 }
-#existing {
+#transactions {
+  display: none;
+}
+#settings, #edit-account-button {
   display: none;
 }
 
