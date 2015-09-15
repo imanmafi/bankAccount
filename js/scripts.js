@@ -16,7 +16,7 @@ Account.prototype.deposit = function(amount) {
 }
 
 var newCustomer = new Customer('')
-var newAccount = new Account(0, new Object());
+var newAccount = new Account(0, newCustomer);
 
 $(document).ready(function() {
   $("#account-header").text('New Account');
@@ -51,7 +51,7 @@ $(document).ready(function() {
     newCustomer.name = $("input#updated-customer-name").val();
     newAccount.customer = newCustomer;
     $(".customer").text(newCustomer.name);
-    $("#account-header").text('New Account');
+    $("#account-header").text('Transactions');
     $("#transactions").show();
     $("#settings").hide();
   });
@@ -70,8 +70,15 @@ function updateAccount(action) {
 
   event.preventDefault();
   var value = parseFloat($(selector).val());
-  newAccount[methodToInvoke](value);
-  $("#balance").text(newAccount.balance);
+
+  if (action === 'withdraw' && newAccount.balance - value < 0) {
+    $("#requested-withdrawal").text(value);
+    $("#max-withdrawal").text(newAccount.balance);
+    $("#insufficient-funds-modal").modal({'show' : true})
+  } else {
+    newAccount[methodToInvoke](value);
+    $("#balance").text(newAccount.balance);
+  }
 
   if (newAccount.balance >= 5000) {
     $("#portfolioModal1").modal({'show' : true});

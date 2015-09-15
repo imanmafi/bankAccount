@@ -257,9 +257,38 @@
                         <div class="modal-body">
                             <h2>Congratulations!</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/cake.png" class="img-responsive img-centered modal-img" alt="">
                             <p>Thank you, <span class="customer"></span>!  You've earned a free ice cream cake from Salt & Straw.  Here's your QR code:</p>
                             <img src="img/qrcode.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="insufficient-funds-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Oops!</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered modal-img" alt="">
+                            <h4>
+                              A withdrawal of <i><span id="requested-withdrawal"></span></i> would result in negative balance.<br>
+                              <small>
+                                Your maximum withdrawal amount is: <i><span id="max-withdrawal"></span></i><br>
+                                Please re-submit.
+                              </small>
+                            </h4>
                         </div>
                     </div>
                 </div>
